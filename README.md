@@ -22,7 +22,9 @@ export default Router;
 ```
 
 Router에서 children들의 props 정보를 볼 수 있다.
+
 Router children들의 props 중에서
+
 path prop이 location.pathname과 일치하는 children을 리턴하는 형식으로 구현하였다.
 
 # Route
@@ -47,7 +49,9 @@ export default function useRouter() {
 ```
 
 push함수가 동작하면 pushState로 url을 변경하고
+
 dispatchEvent로 popState 이벤트를 발생시켜
+
 Router에서 추가한 EventListener가 반응할 수 있게 구현하였다.
 
 # Page Component
