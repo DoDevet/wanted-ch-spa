@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const Router = ({ children }: { children: React.ReactNode }) => {
-  const [path, setPath] = useState(window.location.pathname);
+  const [path, setPath] = useState(location.pathname);
 
   useEffect(() => {
-    const handleSetPath = () => setPath(window.location.pathname);
+    const handleSetPath = () => setPath(location.pathname);
     addEventListener("popstate", handleSetPath);
     return () => removeEventListener("popstate", handleSetPath);
   }, []);
